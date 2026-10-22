@@ -1,0 +1,23 @@
+{
+  "dataset": "Breast Cancer Wisconsin (Diagnostic) \u2014 sklearn bundled copy",
+  "target_encoding": {
+    "0": "benign",
+    "1": "malignant"
+  },
+  "observations": 569,
+  "features": 30,
+  "train_samples": 455,
+  "test_samples": 114,
+  "train_class_counts": {
+    "0": 285,
+    "1": 170
+  },
+  "test_class_counts": {
+    "0": 72,
+    "1": 42
+  },
+  "majority_baseline_test_accuracy": 0.631578947368421,
+  "majority_baseline_malignant_recall": 0.0,
+  "selection_metric": "mean stratified 5-fold training CV malignant F1",
+  "recommended_model": "SVM"
+}
