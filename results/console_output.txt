@@ -1,0 +1,22 @@
+Dataset: 569 rows; 30 features
+Class encoding: 0 = benign; 1 = malignant
+Train / test: 455 / 114
+Test class counts: {'0': 72, '1': 42}
+
+Test metrics / cross-validation results:
+
+        Model  Baseline_CV_F1  Tuned_CV_F1  CV_F1_SD  Accuracy  Precision  Recall     F1  Log_Loss  ROC_AUC  Train_Accuracy  TN  FP  FN  TP
+          SVM          0.9610       0.9674    0.0114    0.9737     1.0000  0.9286 0.9630    0.0946   0.9927          0.9890  72   0   3  39
+          KNN          0.9510       0.9633    0.0250    0.9386     0.9730  0.8571 0.9114    0.4024   0.9825          0.9846  71   1   6  36
+  Naive Bayes          0.9185       0.9185    0.0361    0.9386     1.0000  0.8333 0.9091    0.4086   0.9934          0.9429  72   0   7  35
+Decision Tree          0.8962       0.9127    0.0279    0.9211     0.9024  0.8810 0.8916    1.6452   0.9425          0.9714  68   4   5  37
+
+Selected hyperparameters:
+SVM: {'model__C': 10, 'model__kernel': 'rbf'}
+KNN: {'model__n_neighbors': 3, 'model__weights': 'uniform'}
+Naive Bayes: {'var_smoothing': 1e-09}
+Decision Tree: {'criterion': 'gini', 'max_depth': None, 'min_samples_leaf': 3}
+
+Majority-class baseline accuracy: 0.6316
+Best by training cross-validation F1: SVM
+Outputs written to: /mnt/data/MDM_AIML_Practical_04_Classification/results
